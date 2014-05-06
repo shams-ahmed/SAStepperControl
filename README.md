@@ -3,11 +3,21 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/SAStepperControl/badge.png)](http://cocoadocs.org/docsets/SAStepperControl)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/SAStepperControl/badge.png)](http://cocoadocs.org/docsets/SAStepperControl)
 
+## Purpose
+
+An easy-to-use UIStepper subclass that implements a counter within the control
+
+##### Let's see example
+
+![Screenshot:](Assets/exmple.gif)
+
+
 ## Usage
 
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
+To run the example project; clone the repo, and open the demo project
 
 ## Requirements
+iOS 7
 
 ## Installation
 
