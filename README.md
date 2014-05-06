@@ -9,7 +9,7 @@ An easy-to-use UIStepper subclass that implements a counter within the control
 
 ##### Let's see example
 
-![Screenshot:](Assets/exmple.gif)
+![Screenshot:](Assets/exmple1.gif)
 
 
 ## Usage
