@@ -24,8 +24,8 @@
         self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
                                                                0,
                                                                30,
-                                                               29)];
-        
+                                                               CGRectGetHeight(self.frame))];
+
         self.label.textAlignment = NSTextAlignmentCenter;
         self.label.textColor = self.tintColor;
         self.label.adjustsFontSizeToFitWidth = YES;
@@ -52,7 +52,7 @@
             
         }
         
-        self.label.text = @"";
+        self.label.text = nil;
         [self.label addSubview:dividerContainer];
         
         return [self imageFromView:self.label];
@@ -64,13 +64,22 @@
     }
     
     self.label.text = [NSNumber numberWithDouble:self.value].stringValue;
+
     return [self imageFromView:self.label];
+}
+
+- (void)tintColorDidChange {
+    [super tintColorDidChange];
+    self.label.textColor = self.tintColor;
+
+    [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
+
 }
 
 
 #pragma mark - UIImage
 - (UIImage *)imageFromView:(UIView *)view {
-    UIGraphicsBeginImageContext(view.frame.size); // CGSizeMake(30, 29)
+    UIGraphicsBeginImageContext(view.frame.size);
 
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
