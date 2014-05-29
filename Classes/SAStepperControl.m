@@ -79,8 +79,8 @@
 
 #pragma mark - UIImage
 - (UIImage *)imageFromView:(UIView *)view {
-    UIGraphicsBeginImageContext(view.frame.size);
-
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
+    
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     
