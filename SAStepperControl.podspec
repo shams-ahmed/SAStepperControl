@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SAStepperControl"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "UIStepper subclass that display's current value between Increment/decrement operators"
   s.homepage         = "https://github.com/shams-ahmed/SAStepperControl"
   s.screenshots      = "https://raw.githubusercontent.com/shams-ahmed/SAStepperControl/master/Assets/Screenshot1.png"
