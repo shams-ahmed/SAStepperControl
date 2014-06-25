@@ -16,11 +16,11 @@
 @implementation SAViewController
 
 #pragma mark -
-#pragma mark - class method
+#pragma mark - Class
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // init SAStepperControl & add to View.
+    // init SAStepperControl & add to subview.
     SAStepperControl *stepperControl = [[SAStepperControl alloc] initWithFrame:CGRectMake(self.view.center.x - 46,
                                                                                           self.view.center.y,
                                                                                           0,

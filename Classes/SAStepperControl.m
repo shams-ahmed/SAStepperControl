@@ -22,33 +22,41 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setupLabel];
+        
     }
     
     return self;
 }
 
--(void) setupLabel
-{
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,30,CGRectGetHeight(self.frame))];
+- (void)awakeFromNib {
+    [self setupLabel];
+    
+}
+
+
+#pragma mark - Setup
+- (void)setupLabel {
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
+                                                           0,
+                                                           30,
+                                                           CGRectGetHeight(self.frame))];
     
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.textColor = self.tintColor;
     self.label.adjustsFontSizeToFitWidth = YES;
     
     [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
+    
 }
 
--(void)awakeFromNib
-{
-    [self setupLabel];
-}
 
+#pragma mark - UIStepperControl
 - (UIImage *)dividerImageForLeftSegmentState:(UIControlState)leftState rightSegmentState:(UIControlState)rightState {
     if (self.value == 0) {
         UIView *dividerContainer = [[UIView alloc] initWithFrame:CGRectMake(14,
-                                                                   0,
-                                                                   2,
-                                                                   29)];
+                                                                            0,
+                                                                            2,
+                                                                            29)];
         
         dividerContainer.alpha = 0.5;
         dividerContainer.backgroundColor = self.tintColor;
