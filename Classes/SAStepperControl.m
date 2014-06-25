@@ -21,20 +21,26 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
-                                                               0,
-                                                               30,
-                                                               CGRectGetHeight(self.frame))];
-
-        self.label.textAlignment = NSTextAlignmentCenter;
-        self.label.textColor = self.tintColor;
-        self.label.adjustsFontSizeToFitWidth = YES;
-        
-        [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
-        
+        [self setupLabel];
     }
     
     return self;
+}
+
+-(void) setupLabel
+{
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,30,CGRectGetHeight(self.frame))];
+    
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.textColor = self.tintColor;
+    self.label.adjustsFontSizeToFitWidth = YES;
+    
+    [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
+}
+
+-(void)awakeFromNib
+{
+    [self setupLabel];
 }
 
 - (UIImage *)dividerImageForLeftSegmentState:(UIControlState)leftState rightSegmentState:(UIControlState)rightState {
