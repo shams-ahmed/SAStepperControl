@@ -34,3 +34,7 @@ shams-ahmed, shamsahmed@me.com
 
 SAStepperControl is available under the MIT license. See the LICENSE file for more info.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shams-ahmed/sasteppercontrol/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
