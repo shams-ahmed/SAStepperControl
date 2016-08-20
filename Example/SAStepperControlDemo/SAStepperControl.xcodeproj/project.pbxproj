@@ -10,6 +10,7 @@
 		10AA36191D690A1A002BA782 /* SAStepperControl+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */; };
 		10AA361C1D691B2C002BA782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10AA361B1D691B2C002BA782 /* Info.plist */; };
 		10AA36251D691C66002BA782 /* SAStepperControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA36241D691C66002BA782 /* SAStepperControlUITests.swift */; };
+		10AA362D1D691E97002BA782 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10AA362C1D691E97002BA782 /* Launch Screen.storyboard */; };
 		D55C39A019193FEE0090B6B4 /* SAStepperControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C399F19193FEE0090B6B4 /* SAStepperControl.m */; };
 		D58C751B1918F8550019067C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751A1918F8550019067C /* Foundation.framework */; };
 		D58C751D1918F8550019067C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751C1918F8550019067C /* CoreGraphics.framework */; };
@@ -39,6 +40,7 @@
 		10AA36221D691C66002BA782 /* SAStepperControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAStepperControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AA36241D691C66002BA782 /* SAStepperControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAStepperControlUITests.swift; sourceTree = "<group>"; };
 		10AA36261D691C66002BA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10AA362C1D691E97002BA782 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D55C399E19193FEE0090B6B4 /* SAStepperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStepperControl.h; sourceTree = "<group>"; };
 		D55C399F19193FEE0090B6B4 /* SAStepperControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStepperControl.m; sourceTree = "<group>"; };
 		D58C75171918F8550019067C /* SAStepperControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAStepperControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 				D58C75231918F8550019067C /* InfoPlist.strings */,
 				D58C75261918F8550019067C /* main.m */,
 				D58C75281918F8550019067C /* SAStepperControl-Prefix.pch */,
+				10AA362C1D691E97002BA782 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				D58C75361918F8550019067C /* Images.xcassets in Resources */,
 				D58C75251918F8550019067C /* InfoPlist.strings in Resources */,
+				10AA362D1D691E97002BA782 /* Launch Screen.storyboard in Resources */,
 				10AA361C1D691B2C002BA782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +423,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAStepperControl/SAStepperControl-Prefix.pch";
 				INFOPLIST_FILE = "SAStepperControl/SAStepperControl-Info.plist";
@@ -434,7 +437,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAStepperControl/SAStepperControl-Prefix.pch";
 				INFOPLIST_FILE = "SAStepperControl/SAStepperControl-Info.plist";
