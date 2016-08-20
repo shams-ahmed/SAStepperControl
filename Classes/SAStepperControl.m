@@ -7,22 +7,24 @@
 //
 
 #import "SAStepperControl.h"
+#import "SAStepperControl+Image.h"
 
 @interface SAStepperControl ()
 
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UILabel * __nonnull label;
 
 @end
 
 @implementation SAStepperControl
 
 #pragma mark -
-#pragma mark - class method
-- (id)initWithFrame:(CGRect)frame {
+#pragma mark - Init
+
+- (__nonnull instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
+    
     if (self) {
         [self setupLabel];
-        
     }
     
     return self;
@@ -30,11 +32,23 @@
 
 - (void)awakeFromNib {
     [self setupLabel];
-    
 }
 
+#pragma mark -
+#pragma mark - Layout
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.label.frame = CGRectMake(0,
+                                  0,
+                                  30,
+                                  CGRectGetHeight(self.frame));
+}
+
+#pragma mark -
 #pragma mark - Setup
+
 - (void)setupLabel {
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0,
                                                            0,
@@ -45,13 +59,34 @@
     self.label.textColor = self.tintColor;
     self.label.adjustsFontSizeToFitWidth = YES;
     
-    [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
-    
+    [self setDividerImage:[self imageFromView:self.label]
+      forLeftSegmentState:UIControlStateNormal
+        rightSegmentState:UIControlStateNormal];
 }
 
+#pragma mark -
+#pragma mark - Tint Color
 
-#pragma mark - UIStepperControl
+- (void)tintColorDidChange {
+    [super tintColorDidChange];
+    self.label.textColor = self.tintColor;
+
+    [self setDividerImage:[self imageFromView:self.label]
+      forLeftSegmentState:UIControlStateNormal
+        rightSegmentState:UIControlStateNormal];
+}
+
+#pragma mark -
+#pragma mark - Override
+
 - (UIImage *)dividerImageForLeftSegmentState:(UIControlState)leftState rightSegmentState:(UIControlState)rightState {
+    return [self dividerImage];
+}
+
+#pragma mark -
+#pragma mark - Private
+
+- (UIImage * __nonnull)dividerImage {
     if (self.value == 0) {
         UIView *dividerContainer = [[UIView alloc] initWithFrame:CGRectMake(14,
                                                                             0,
@@ -74,34 +109,11 @@
     
     for (UIView *view in self.label.subviews) {
         [view removeFromSuperview];
-        
     }
     
     self.label.text = [NSNumber numberWithDouble:self.value].stringValue;
-
+    
     return [self imageFromView:self.label];
 }
-
-- (void)tintColorDidChange {
-    [super tintColorDidChange];
-    self.label.textColor = self.tintColor;
-
-    [self setDividerImage:[self imageFromView:self.label] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal];
-
-}
-
-
-#pragma mark - UIImage
-- (UIImage *)imageFromView:(UIView *)view {
-    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0.0);
-    
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-
-    return viewImage;
-}
-
 
 @end

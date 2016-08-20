@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10AA36191D690A1A002BA782 /* SAStepperControl+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */; };
 		D55C39A019193FEE0090B6B4 /* SAStepperControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C399F19193FEE0090B6B4 /* SAStepperControl.m */; };
 		D58C751B1918F8550019067C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751A1918F8550019067C /* Foundation.framework */; };
 		D58C751D1918F8550019067C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751C1918F8550019067C /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10AA36171D6909D5002BA782 /* SAStepperControl+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAStepperControl+Image.h"; sourceTree = "<group>"; };
+		10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAStepperControl+Image.m"; sourceTree = "<group>"; };
 		D55C399E19193FEE0090B6B4 /* SAStepperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStepperControl.h; sourceTree = "<group>"; };
 		D55C399F19193FEE0090B6B4 /* SAStepperControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStepperControl.m; sourceTree = "<group>"; };
 		D58C75171918F8550019067C /* SAStepperControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAStepperControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,8 @@
 			children = (
 				D55C399E19193FEE0090B6B4 /* SAStepperControl.h */,
 				D55C399F19193FEE0090B6B4 /* SAStepperControl.m */,
+				10AA36171D6909D5002BA782 /* SAStepperControl+Image.h */,
+				10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */,
 			);
 			name = SAStepperControl;
 			path = ../../Classes;
@@ -142,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SA;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = SA;
 			};
 			buildConfigurationList = D58C75121918F8550019067C /* Build configuration list for PBXProject "SAStepperControl" */;
@@ -180,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AA36191D690A1A002BA782 /* SAStepperControl+Image.m in Sources */,
 				D58C752B1918F8550019067C /* SAAppDelegate.m in Sources */,
 				D55C39A019193FEE0090B6B4 /* SAStepperControl.m in Sources */,
 				D58C75341918F8550019067C /* SAViewController.m in Sources */,
@@ -219,6 +225,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -282,6 +289,7 @@
 				GCC_PREFIX_HEADER = "SAStepperControl/SAStepperControl-Prefix.pch";
 				INFOPLIST_FILE = "SAStepperControl/SAStepperControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SA.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,6 +304,7 @@
 				GCC_PREFIX_HEADER = "SAStepperControl/SAStepperControl-Prefix.pch";
 				INFOPLIST_FILE = "SAStepperControl/SAStepperControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SA.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

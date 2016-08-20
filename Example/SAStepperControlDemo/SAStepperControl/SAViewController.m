@@ -16,19 +16,21 @@
 @implementation SAViewController
 
 #pragma mark -
-#pragma mark - Class
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // init SAStepperControl & add to subview.
+    // Example of stepper control style
+    self.view.tintColor = [UIColor redColor];
+    
+    // Create SAStepperControl
     SAStepperControl *stepperControl = [[SAStepperControl alloc] initWithFrame:CGRectMake(self.view.center.x - 46,
                                                                                           self.view.center.y,
                                                                                           0,
                                                                                           0)];
 
     [self.view addSubview:stepperControl];
-
 }
-
 
 @end
