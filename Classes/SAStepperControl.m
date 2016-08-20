@@ -31,6 +31,8 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     [self setupLabel];
 }
 
@@ -111,7 +113,7 @@
         [view removeFromSuperview];
     }
     
-    self.label.text = [NSNumber numberWithDouble:self.value].stringValue;
+    self.label.text = @(self.value).stringValue;
     
     return [self imageFromView:self.label];
 }

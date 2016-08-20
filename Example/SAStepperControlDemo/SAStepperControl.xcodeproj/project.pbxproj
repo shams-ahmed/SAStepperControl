@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10AA36191D690A1A002BA782 /* SAStepperControl+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */; };
+		10AA361C1D691B2C002BA782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10AA361B1D691B2C002BA782 /* Info.plist */; };
+		10AA36251D691C66002BA782 /* SAStepperControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA36241D691C66002BA782 /* SAStepperControlUITests.swift */; };
 		D55C39A019193FEE0090B6B4 /* SAStepperControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D55C399F19193FEE0090B6B4 /* SAStepperControl.m */; };
 		D58C751B1918F8550019067C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751A1918F8550019067C /* Foundation.framework */; };
 		D58C751D1918F8550019067C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C751C1918F8550019067C /* CoreGraphics.framework */; };
@@ -19,9 +21,24 @@
 		D58C75361918F8550019067C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58C75351918F8550019067C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		10AA36271D691C66002BA782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58C750F1918F8550019067C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58C75161918F8550019067C;
+			remoteInfo = SAStepperControl;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		10AA36171D6909D5002BA782 /* SAStepperControl+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAStepperControl+Image.h"; sourceTree = "<group>"; };
 		10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAStepperControl+Image.m"; sourceTree = "<group>"; };
+		10AA361B1D691B2C002BA782 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10AA361D1D691BF4002BA782 /* SAStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStepper.h; sourceTree = "<group>"; };
+		10AA36221D691C66002BA782 /* SAStepperControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAStepperControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10AA36241D691C66002BA782 /* SAStepperControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAStepperControlUITests.swift; sourceTree = "<group>"; };
+		10AA36261D691C66002BA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55C399E19193FEE0090B6B4 /* SAStepperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStepperControl.h; sourceTree = "<group>"; };
 		D55C399F19193FEE0090B6B4 /* SAStepperControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStepperControl.m; sourceTree = "<group>"; };
 		D58C75171918F8550019067C /* SAStepperControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAStepperControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		10AA361F1D691C66002BA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C75141918F8550019067C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10AA361A1D691B06002BA782 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				10AA361B1D691B2C002BA782 /* Info.plist */,
+				10AA361D1D691BF4002BA782 /* SAStepper.h */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		10AA36231D691C66002BA782 /* SAStepperControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10AA36241D691C66002BA782 /* SAStepperControlUITests.swift */,
+				10AA36261D691C66002BA782 /* Info.plist */,
+			);
+			path = SAStepperControlUITests;
+			sourceTree = "<group>";
+		};
 		D55C399D19193FEE0090B6B4 /* SAStepperControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +103,7 @@
 				D55C399F19193FEE0090B6B4 /* SAStepperControl.m */,
 				10AA36171D6909D5002BA782 /* SAStepperControl+Image.h */,
 				10AA36181D690A1A002BA782 /* SAStepperControl+Image.m */,
+				10AA361A1D691B06002BA782 /* support */,
 			);
 			name = SAStepperControl;
 			path = ../../Classes;
@@ -71,6 +114,7 @@
 			children = (
 				D55C399D19193FEE0090B6B4 /* SAStepperControl */,
 				D58C75201918F8550019067C /* SAStepperControlDemo */,
+				10AA36231D691C66002BA782 /* SAStepperControlUITests */,
 				D58C75191918F8550019067C /* Frameworks */,
 				D58C75181918F8550019067C /* Products */,
 			);
@@ -80,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D58C75171918F8550019067C /* SAStepperControl.app */,
+				10AA36221D691C66002BA782 /* SAStepperControlUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +168,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		10AA36211D691C66002BA782 /* SAStepperControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10AA36291D691C66002BA782 /* Build configuration list for PBXNativeTarget "SAStepperControlUITests" */;
+			buildPhases = (
+				10AA361E1D691C66002BA782 /* Sources */,
+				10AA361F1D691C66002BA782 /* Frameworks */,
+				10AA36201D691C66002BA782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10AA36281D691C66002BA782 /* PBXTargetDependency */,
+			);
+			name = SAStepperControlUITests;
+			productName = SAStepperControlUITests;
+			productReference = 10AA36221D691C66002BA782 /* SAStepperControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D58C75161918F8550019067C /* SAStepperControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58C754C1918F8550019067C /* Build configuration list for PBXNativeTarget "SAStepperControl" */;
@@ -147,8 +210,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SA;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = SA;
+				TargetAttributes = {
+					10AA36211D691C66002BA782 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = D58C75161918F8550019067C;
+					};
+				};
 			};
 			buildConfigurationList = D58C75121918F8550019067C /* Build configuration list for PBXProject "SAStepperControl" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,23 +234,40 @@
 			projectRoot = "";
 			targets = (
 				D58C75161918F8550019067C /* SAStepperControl */,
+				10AA36211D691C66002BA782 /* SAStepperControlUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		10AA36201D691C66002BA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C75151918F8550019067C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D58C75361918F8550019067C /* Images.xcassets in Resources */,
 				D58C75251918F8550019067C /* InfoPlist.strings in Resources */,
+				10AA361C1D691B2C002BA782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		10AA361E1D691C66002BA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10AA36251D691C66002BA782 /* SAStepperControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C75131918F8550019067C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +282,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		10AA36281D691C66002BA782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58C75161918F8550019067C /* SAStepperControl */;
+			targetProxy = 10AA36271D691C66002BA782 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D58C75231918F8550019067C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -207,6 +302,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		10AA362A1D691C66002BA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SAStepperControlUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = SA.SAStepperControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_TARGET_NAME = SAStepperControl;
+			};
+			name = Debug;
+		};
+		10AA362B1D691C66002BA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SAStepperControlUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = SA.SAStepperControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SAStepperControl;
+			};
+			name = Release;
+		};
 		D58C754A1918F8550019067C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +448,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		10AA36291D691C66002BA782 /* Build configuration list for PBXNativeTarget "SAStepperControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10AA362A1D691C66002BA782 /* Debug */,
+				10AA362B1D691C66002BA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D58C75121918F8550019067C /* Build configuration list for PBXProject "SAStepperControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
